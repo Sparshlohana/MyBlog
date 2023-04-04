@@ -1,0 +1,8 @@
+.blogPostContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 10px;
+  width: 50%;
+}
