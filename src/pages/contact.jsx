@@ -1,28 +1,48 @@
 import React, { useState } from "react";
 import styles from "../styles/Contact.module.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
-    phoneNumber: null,
+    phoneNumber: "",
     description: "",
     email: "",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const jsonData = JSON.stringify(formData);
-    const option = {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: jsonData,
-    };
-    console.log(option);
-    const response = await fetch("/api/contact", option);
-    const result = await response.json();
-    console.log("Data Posted Successfully");
+    try {
+      const jsonData = JSON.stringify(formData);
+      const option = {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: jsonData,
+      };
+      console.log(option);
+      const response = await fetch("/api/contact", option);
+      const result = await response.json();
+      console.log("Data Posted Successfully");
+      const notify = () => {
+        toast.success("Thanks for Contacting Us!!");
+      };
+      notify();
+      setFormData({
+        name: "",
+        phoneNumber: "",
+        description: "",
+        email: "",
+      });
+    } catch (error) {
+      console.log(error.message);
+      const notify = () => {
+        toast.error("Oops! Something went wrong!");
+      };
+      notify();
+    }
   };
 
   const handleChange = (e) => {
