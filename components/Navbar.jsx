@@ -2,6 +2,7 @@ import { SessionProvider, signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import styles from "../src/styles/Home.module.css";
 import OnProfileClick from "./onProfileClick";
+import Slug from "@/pages/blogpost/[slug]";
 
 const Navbar = ({ setOnProfileClick, onProfileClick }) => {
   return (

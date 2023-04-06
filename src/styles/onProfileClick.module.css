@@ -35,6 +35,17 @@
   font-size: 0.95rem;
 }
 
+.profileAccountCreateYourOwnBlogContainer {
+  background-color: #1f1f1f;
+  margin-top: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+.profileAccountCreateYourOwnBlog {
+  cursor: pointer;
+}
+
 .profileAccountSignOutContainer {
   margin-top: 5px;
   background: #1f1f1f;
