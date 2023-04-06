@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import styles from "../styles/Blog.module.css";
-import Link from "next/link";
 import BlogComponent from "../../components/Blog";
 import * as fs from "fs";
 

@@ -1,0 +1,57 @@
+.onProfileClick {
+  position: absolute;
+  right: 10px;
+  border: 1px solid #fff;
+  padding: 7px 10px;
+  border-radius: 10px;
+  z-index: 32;
+}
+
+.profileAccountInformationContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #1f1f1f;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.profileImageContainer {
+  width: 60px;
+}
+
+.profileImage {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profileAccountUserName {
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.profileAccountEmail {
+  font-weight: 100;
+  font-size: 0.95rem;
+}
+
+.profileAccountSignOutContainer {
+  margin-top: 5px;
+  background: #1f1f1f;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileAccountSignOutIcon {
+  font-size: 0.9rem;
+}
+
+.profileAccountSignOut {
+  font-size: 0.9rem;
+  font-weight: 100;
+  cursor: pointer;
+}
