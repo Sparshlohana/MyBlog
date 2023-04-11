@@ -3,8 +3,9 @@ import { useState } from "react";
 import styles from "../src/styles/Blog.module.css";
 
 const Blog = ({ dataJson }) => {
-  const [blogData, setBlogData] = useState(dataJson);
-
+  const jsonData = JSON.parse(dataJson);
+  const [blogData, setBlogData] = useState(jsonData);
+  console.log(blogData);
   return (
     <div className={styles.blogPageContainerMain}>
       <div className={styles.blogPageContainer}>

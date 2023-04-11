@@ -3,8 +3,6 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 // import Script from "next/script";
-import BlogComponent from "../../components/Blog";
-import * as fs from "fs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,7 +36,7 @@ export default function Home({ dataJson }) {
         />
       </main>
 
-      <BlogComponent dataJson={dataJson} />
+      {/* <BlogComponent dataJson={dataJson} /> */}
     </>
   );
 }
@@ -51,17 +49,17 @@ export default function Home({ dataJson }) {
 //   };
 // }
 
-export async function getStaticProps() {
-  const dirName = await fs.promises.readdir("blogData");
-  let dataJson = [];
-  await Promise.all(
-    dirName.map(async (item) => {
-      const allData = await fs.promises.readFile("blogData/" + item, "utf8");
-      dataJson.push(JSON.parse(allData));
-    })
-  );
-  // res.status(200).json(jsonData);
-  return {
-    props: { dataJson },
-  };
-}
+// export async function getStaticProps() {
+//   const dirName = await fs.promises.readdir("blogData");
+//   let dataJson = [];
+//   await Promise.all(
+//     dirName.map(async (item) => {
+//       const allData = await fs.promises.readFile("blogData/" + item, "utf8");
+//       dataJson.push(JSON.parse(allData));
+//     })
+//   );
+//   // res.status(200).json(jsonData);
+//   return {
+//     props: { dataJson },
+//   };
+// }

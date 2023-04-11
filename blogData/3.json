@@ -1,5 +1,0 @@
-{
-  "title": "How to learn Next",
-  "content": "The best way to learn Next.js is to start by getting a solid understanding of React, since Next.js is built on top of it. Then, familiarize yourself with the basic concepts of Next.js, such as server-side rendering, static site generation, and dynamic imports. From there, work through the official Next.js documentation and examples, and try building a simple project to put your new skills into practice. Additionally, consider joining the Next.js community and participating in online forums or attending meetups to learn from others and ask questions. Continuously practice and iterate on your projects to improve your understanding and become proficient in Next.js.",
-  "slug": "3"
-}
