@@ -2,7 +2,6 @@ import { SessionProvider, signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import styles from "../src/styles/Home.module.css";
 import OnProfileClick from "./onProfileClick";
-import Slug from "@/pages/blogpost/[slug]";
 
 const Navbar = ({ setOnProfileClick, onProfileClick }) => {
   return (
@@ -15,9 +14,28 @@ const Navbar = ({ setOnProfileClick, onProfileClick }) => {
   );
 };
 
+const postSession = async (session) => {
+  try {
+    if (session) {
+      const stringifySession = JSON.stringify(session);
+      const option = {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: stringifySession,
+      };
+      const postSessionData = await fetch("/api/storeSession", option);
+      const postSessionDataJson = await postSessionData.json();
+    }
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 const Register = ({ setOnProfileClick, onProfileClick }) => {
   const { data: session } = useSession();
-
+  postSession(session);
   const handleClick = (e) => {
     e.stopPropagation();
     setOnProfileClick(!onProfileClick);
@@ -41,12 +59,6 @@ const Register = ({ setOnProfileClick, onProfileClick }) => {
           </Link>
           <div className={styles.navSignInButtonContainer}>
             {session ? (
-              // <button
-              //   className={styles.navSignInButton}
-              //   onClick={() => signOut()}
-              // >
-              //   Sign-Out
-              // </button>
               <>
                 <img
                   src={session.user.image}
@@ -58,7 +70,9 @@ const Register = ({ setOnProfileClick, onProfileClick }) => {
             ) : (
               <button
                 className={styles.navSignInButton}
-                onClick={() => signIn()}
+                onClick={() => {
+                  signIn();
+                }}
               >
                 Sign-In
               </button>

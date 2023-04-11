@@ -1,0 +1,55 @@
+.createContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.createHeadingMainContainer {
+  margin-top: 10px;
+}
+
+.createHeadingMain {
+  text-decoration: underline;
+}
+
+.createBlogForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 30px;
+  /* border: 1px solid #fff; */
+  width: 40%;
+}
+
+.createBlogFromItems {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.createFormItemSpan {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.createFormItemInput {
+  padding: 5px;
+  font-size: 1.4rem;
+  border: 1px solid #747474;
+  outline: none;
+  border-radius: 10px;
+}
+
+.createBlogFormSubmitButton {
+  width: 30%;
+  padding: 5px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  background: #3b3b3b;
+  border: none;
+  cursor: pointer;
+}

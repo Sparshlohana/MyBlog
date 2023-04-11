@@ -15,7 +15,6 @@ const InnerRegister = () => {
     return (
       <div>
         <p>Welcome, {session.user.name}</p>
-        {console.log(session)}
         <button onClick={() => signOut()}>Sign Out</button>
       </div>
     );

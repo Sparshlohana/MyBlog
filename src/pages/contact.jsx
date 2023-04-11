@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/Contact.module.css";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Head from "next/head";
 
 const Contact = () => {
@@ -22,7 +21,6 @@ const Contact = () => {
         },
         body: jsonData,
       };
-      console.log(option);
       const response = await fetch("/api/contact", option);
       const result = await response.json();
       console.log("Data Posted Successfully");
@@ -63,7 +61,6 @@ const Contact = () => {
     });
   };
 
-  // console.log(formData);
   return (
     <>
       <Head>
