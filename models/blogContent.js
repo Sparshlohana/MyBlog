@@ -15,6 +15,18 @@ const blogContentSchema = new Schema({
         default: function () {
             return crypto.randomBytes(4).toString('hex');
         }
+    },
+    userName: {
+        type: String,
+        required: true
+    },
+    userImageUrl: {
+        type: String,
+        required: true
+    },
+    userEmail: {
+        type: String,
+        required: true
     }
 })
 

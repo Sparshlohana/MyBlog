@@ -5,17 +5,27 @@ const CreateBlogPermission = ({
   setShowCreateBlogPermission,
   blogContent,
   setBlogContent,
+  session,
 }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const jsonData = JSON.stringify(blogContent);
+    // const jsonData = JSON.stringify(blogContent);
+    // const stringifySession = JSON.stringify(session);
+
+    const mergeData = {
+      ...blogContent,
+      ...session.user,
+    };
+    console.log(mergeData);
+
+    const mergeDataStringify = JSON.stringify(mergeData);
     const option = {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: jsonData,
+      body: mergeDataStringify,
     };
     const postContent = await fetch("/api/createBlog", option);
     const jsonPostContent = await postContent.json();

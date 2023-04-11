@@ -15,12 +15,27 @@ const Blog = ({ dataJson }) => {
           {blogData.map((data) => {
             return (
               <>
-                <Link href={`/blogpost/${data.slug}`}>
-                  <h2 className={styles.blogPageItemHeading}>{data.title}</h2>
-                </Link>
-                <p className={styles.blogPageItemContent}>
-                  {data.content.substr(0, 50) + "..."}
-                </p>
+                <div className={styles.blogPageMapContainer}>
+                  <div className={styles.blogPageMapSpan}>
+                    <img
+                      className={styles.blogPageMapUserImageUrl}
+                      src={data.userImageUrl}
+                      alt="Img"
+                    />
+                  </div>
+
+                  <Link href={`/blogpost/${data.slug}`}>
+                    <h2 className={styles.blogPageItemHeading}>{data.title}</h2>
+                  </Link>
+                  <p className={styles.blogPageItemContent}>
+                    {data.content.substr(0, 50) + "..."}
+                  </p>
+                  <div className={styles.blogPageMapUserNameContainer}>
+                    <h1 className={styles.blogPageMapUserName}>
+                      -{data.userName}
+                    </h1>
+                  </div>
+                </div>
                 <br />
               </>
             );

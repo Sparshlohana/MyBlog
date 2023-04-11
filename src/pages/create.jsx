@@ -1,8 +1,18 @@
 import { useState } from "react";
 import styles from "../styles/CreateBlogs.module.css";
 import CreateBlogPermission from "../../components/createBlogPermission";
+import { SessionProvider, useSession } from "next-auth/react";
 
 const Create = () => {
+  return (
+    <SessionProvider>
+      <SessionComponent />
+    </SessionProvider>
+  );
+};
+
+const SessionComponent = () => {
+  const { data: session } = useSession();
   const [blogContent, setBlogContent] = useState({
     title: "",
     content: "",
@@ -26,6 +36,7 @@ const Create = () => {
         setShowCreateBlogPermission={setShowCreateBlogPermission}
         blogContent={blogContent}
         setBlogContent={setBlogContent}
+        session={session}
       />
     );
   } else

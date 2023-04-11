@@ -81,7 +81,7 @@ const About = () => {
             rel="noreferrer"
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png"
+              src="https://www.wellybox.com/wp-content/uploads/2023/02/pngkey.com-twitter-logo-png-transparent-27646.png"
               alt="WPIcon"
               className={styles.contactMeIcons}
             />
