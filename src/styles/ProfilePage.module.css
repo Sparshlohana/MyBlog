@@ -1,0 +1,118 @@
+.profilePageContainer {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.profilePageProfileContainer {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.profilePageImageContainer {
+  width: 140px;
+}
+
+.profilePageImage {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid #353535;
+  pointer-events: none;
+}
+
+.profilePageContentContainer {
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+  padding: 10px;
+  position: relative;
+}
+
+.profilePageUserNameContainer {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.profilePageUserMailIcon {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.profilePageMailPara {
+  position: absolute;
+  bottom: -10px;
+}
+.profilePageUserHeading {
+  font-weight: 200;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profilePageContent {
+  font-size: 1.2rem;
+}
+
+.blogPageContainerMain {
+  padding: 1rem;
+  border: 1px solid #fff;
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 10px;
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
+}
+
+.blogPageHeading {
+  text-decoration: underline;
+}
+
+.blogPageItemContainer {
+  margin-top: 30px;
+}
+
+.blogPageMapContainer {
+  border: 1px solid #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.blogPageMapUserNameContainer {
+  width: 100%;
+}
+
+.blogPageMapUserName {
+  font-weight: 200;
+  font-size: 1rem;
+  float: right;
+}
+
+.blogPageMapSpan {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 4%;
+}
+
+.blogPageMapUserImageUrl {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.blogPageItemHeading {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.blogPageItemContent {
+  margin-top: 2px;
+  font-size: 1.1rem;
+}

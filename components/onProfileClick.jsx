@@ -28,6 +28,20 @@ const OnProfileClick = ({ session, setOnProfileClick, onProfileClick }) => {
 
       <div className={styles.profileAccountCreateYourOwnBlogContainer}>
         <Link
+          href="/profile"
+          onClick={(e) => {
+            e.stopPropagation();
+            setOnProfileClick(false);
+          }}
+        >
+          <span className={styles.profileAccountCreateYourOwnBlog}>
+            Your Profile
+          </span>
+        </Link>
+      </div>
+
+      <div className={styles.profileAccountCreateYourOwnBlogContainer}>
+        <Link
           href="/create"
           onClick={(e) => {
             e.stopPropagation();
