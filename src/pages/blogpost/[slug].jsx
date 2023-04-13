@@ -16,15 +16,13 @@ const SessionProviderComponent = () => {
 
   const router = useRouter();
   const { slug } = router.query;
-
+  console.log("Slug=====>", slug);
   useEffect(() => {
     handleApiCall();
   }, []);
 
   const handleApiCall = async () => {
-    const getBlogs = await fetch(
-      `http://localhost:3000/api/getBlog?slug=${slug}`
-    );
+    const getBlogs = await fetch(`/api/getBlog?slug=${slug}`);
     const getBlogsJson = await getBlogs.json();
     setBlog(getBlogsJson);
   };
