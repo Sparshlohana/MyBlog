@@ -33,4 +33,8 @@ const blogContentSchema = new Schema({
 
 const BlogContent = mongoose.models.BlogContent || mongoose.model('BlogContent', blogContentSchema);
 
+BlogContent.prototype.find = (filter) => {
+    return mongoose.model.prototype.find(filter);
+}
+
 export default BlogContent
