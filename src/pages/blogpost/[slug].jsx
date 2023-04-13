@@ -1,19 +1,34 @@
 import style from "../../styles/BlogPost.module.css";
 import { useEffect, useState } from "react";
 import { SessionProvider, useSession } from "next-auth/react";
-import BlogContent from "../../../models/blogContent";
+import { useRouter } from "next/router";
 
-const Slug = ({ jsonData }) => {
+const Slug = () => {
   return (
     <SessionProvider>
-      <SessionProviderComponent jsonData={jsonData} />
+      <SessionProviderComponent />
     </SessionProvider>
   );
 };
 
-const SessionProviderComponent = ({ jsonData }) => {
-  const parseData = JSON.parse(jsonData);
-  const [blogs, setBlog] = useState(parseData);
+const SessionProviderComponent = () => {
+  const [blogs, setBlog] = useState([]);
+
+  const router = useRouter();
+  const { slug } = router.query;
+
+  useEffect(() => {
+    handleApiCall();
+  }, []);
+
+  const handleApiCall = async () => {
+    const getBlogs = await fetch(
+      `http://localhost:3000/api/getBlog?slug=${slug}`
+    );
+    const getBlogsJson = await getBlogs.json();
+    setBlog(getBlogsJson);
+  };
+
   console.log(blogs);
   const { data: session } = useSession();
   if (session) {
@@ -35,16 +50,16 @@ const SessionProviderComponent = ({ jsonData }) => {
   }
 };
 
-export async function getServerSideProps(context) {
-  const slug = context.query.slug;
-  // const data = await fetch(`http://localhost:3000/api/getBlog?slug=${slug}`);
-  // const jsonData = await data?.json();
-  const getSingleBlogData = await BlogContent.findOne({ slug: slug });
-  const jsonData = JSON.stringify(getSingleBlogData);
-  return {
-    props: { jsonData },
-  };
-}
+// export async function getServerSideProps(context) {
+//   const slug = context.query.slug;
+//   // const data = await fetch(`http://localhost:3000/api/getBlog?slug=${slug}`);
+//   // const jsonData = await data?.json();
+//   const getSingleBlogData = await BlogContent.findOne({ slug: slug });
+//   const jsonData = JSON.stringify(getSingleBlogData);
+//   return {
+//     props: { jsonData },
+//   };
+// }
 
 // export async function getStaticPaths() {
 //   return {

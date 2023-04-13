@@ -1,17 +1,14 @@
-import * as fs from "fs";
+import BlogContent from "../../../models/blogContent";
 // http://localhost:3000/api/getBlog?slug=1
 
-export default function handler(req, res) {
-    // const slug = req.params.slug;
-    // console.log(slug);/
-    // fs.readFile(`blogData/${req.query.slug}.json`, 'utf-8', (err, data) => {
-    //     if (err) {
+export default async function handler(req, res) {
+    try {
+        const slug = req.query.slug;
+        console.log(slug);
+        const getSingleBlogData = await BlogContent.findOne({ slug: slug });
+        res.status(200).json(getSingleBlogData)
+    } catch (error) {
+        res.status(500).json({ error })
 
-    //         res.status(500).json({
-    //             err: err?.message
-    //         })
-    //     }
-    //     res.status(200).json(JSON.parse(data))
-    // })
-
+    }
 }
