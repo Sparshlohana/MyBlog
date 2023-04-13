@@ -28,7 +28,7 @@ const Blog = ({ dataJson }) => {
                     <h2 className={styles.blogPageItemHeading}>{data.title}</h2>
                   </Link>
                   <p className={styles.blogPageItemContent}>
-                    {data.content.substr(0, 50) + "..."}
+                    {data.content.substr(0, 20) + "..."}
                   </p>
                   <div className={styles.blogPageMapUserNameContainer}>
                     <h1 className={styles.blogPageMapUserName}>

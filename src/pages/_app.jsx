@@ -1,10 +1,10 @@
+import "../../utils/connect";
 import "@/styles/globals.css";
 import Navbar from "../../components/Navbar";
 import { ToastContainer } from "react-toastify";
 import SessionProvider from "next-auth/react";
 import { useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
-import "../../utils/connect";
 export default function App({ Component, pageProps }) {
   const [onProfileClick, setOnProfileClick] = useState(false);
   return (

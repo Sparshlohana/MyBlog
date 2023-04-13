@@ -55,3 +55,36 @@
   margin-top: 2px;
   font-size: 1.1rem;
 }
+
+@media (max-width: 1000px) {
+  .blogPageContainerMain {
+    width: 90%;
+  }
+  .blogPageMapSpan {
+    width: 3%;
+  }
+}
+
+@media (max-width: 760px) {
+  .blogPageMapSpan {
+    width: 4%;
+  }
+}
+
+@media (max-width: 650px) {
+  .blogPageMapSpan {
+    width: 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .blogPageMapSpan {
+    width: 7%;
+  }
+}
+
+@media (max-width: 375px) {
+  .blogPageMapSpan {
+    width: 9%;
+  }
+}

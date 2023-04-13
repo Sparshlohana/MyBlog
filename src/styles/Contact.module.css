@@ -94,3 +94,40 @@
   background: #ffffff19;
   color: #fff;
 }
+
+@media (max-width: 1220px) {
+  .formContainer {
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .formContainer {
+    width: 60%;
+  }
+}
+
+@media (max-width: 630px) {
+  .formContainer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+  .formContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 470px) {
+  .formContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .formContainer {
+    width: 100%;
+    padding: 5px;
+  }
+}

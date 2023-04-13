@@ -308,3 +308,35 @@
   float: right;
   cursor: pointer;
 }
+
+@media (max-width: 510px) {
+  .mainNav {
+    padding: 0;
+  }
+
+  .mainNavLi {
+    margin: 7px;
+  }
+
+  .mainNavUl {
+    justify-content: flex-start;
+  }
+
+  .navSignInButtonContainer {
+    margin: 0;
+  }
+
+  .center {
+    font-size: 2rem;
+  }
+
+  .blogHomeImg {
+    width: 70%;
+  }
+}
+
+@media (max-width: 340px) {
+  .mainNavLi {
+    font-size: 1.1rem;
+  }
+}

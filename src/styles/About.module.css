@@ -34,4 +34,29 @@
   .contactMeIcons {
     width: 100px;
   }
+  .aboutContainerMain {
+    width: 70%;
+    text-align: center;
+  }
+  .aboutHeading {
+    font-size: 1.7rem;
+  }
+  .aboutContactHeading {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 710px) {
+  .aboutContactMeContainer {
+    width: 90%;
+  }
+}
+
+@media (max-width: 370px) {
+  .aboutHeading {
+    font-size: 1.4rem;
+  }
+  .aboutContactHeading {
+    font-size: 1.4rem;
+  }
 }
