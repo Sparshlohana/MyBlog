@@ -337,6 +337,11 @@
 
 @media (max-width: 340px) {
   .mainNavLi {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+  }
+  .navSignInButton {
+    width: 70%;
+    padding: 5px 0px;
+    font-size: 0.7rem;
   }
 }

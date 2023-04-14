@@ -116,3 +116,59 @@
   margin-top: 2px;
   font-size: 1.1rem;
 }
+
+@media (max-width: 1000px) {
+  .blogPageContainerMain {
+    width: 80%;
+  }
+  .blogPageMapSpan {
+    width: 3%;
+  }
+  .profilePageContainer {
+    width: 60%;
+  }
+}
+
+@media (max-width: 760px) {
+  .blogPageMapSpan {
+    width: 4%;
+  }
+  .profilePageContainer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 650px) {
+  .blogPageMapSpan {
+    width: 5%;
+  }
+  .profilePageContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .blogPageMapSpan {
+    width: 7%;
+  }
+  .profilePageContainer {
+    width: 95%;
+  }
+}
+@media (max-width: 450px) {
+  .profilePageUserHeading {
+    font-size: 1.5rem;
+  }
+  .profilePageProfileContainer {
+    gap: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .blogPageMapSpan {
+    width: 9%;
+  }
+  .profilePageContainer {
+    width: 100%;
+  }
+}

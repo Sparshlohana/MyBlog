@@ -53,3 +53,40 @@
   border: none;
   cursor: pointer;
 }
+
+@media (max-width: 1200px) {
+  .createBlogForm {
+    width: 60%;
+  }
+}
+
+@media (max-width: 815px) {
+  .createBlogForm {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .createBlogForm {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .createBlogForm {
+    width: 90%;
+  }
+
+  .createBlogFormSubmitButton {
+    width: 40%;
+  }
+}
+
+@media (max-width: 415px) {
+  .createBlogFormSubmitButton {
+    width: 50%;
+  }
+  .createHeadingMain {
+    font-size: 1.7rem;
+  }
+}
